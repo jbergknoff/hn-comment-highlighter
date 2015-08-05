@@ -19,7 +19,7 @@ function highlight()
 			// Throw out posts that we couldn't identify.
 			posts = posts.filter(function(post) { return post.id; });
 
-			// If this is the first visit to the thread, don't mark everything.
+			// Only mark posts if the page has been visited before (i.e. some entries in `old_posts`)
 			if (Object.keys(old_posts).length > 0)
 			{
 				posts.forEach
@@ -32,8 +32,7 @@ function highlight()
 				);
 			}
 
-			// The data stored in chrome.storage.local is a hash of the post IDs seen
-			// on this page.
+			// The data stored is a hash of the post IDs seen on this page.
 			var update = {};
 			update[page_id] = posts.reduce
 			(
