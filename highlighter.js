@@ -6,7 +6,7 @@ function highlight()
 	if (!page_id)
 		return;
 
-	chrome.storage.sync.get
+	chrome.storage.local.get
 	(
 		page_id,
 		function(result)
@@ -32,7 +32,7 @@ function highlight()
 				);
 			}
 
-			// The data stored in chrome.storage.sync is a hash of the post IDs seen
+			// The data stored in chrome.storage.local is a hash of the post IDs seen
 			// on this page.
 			var update = {};
 			update[page_id] = posts.reduce
@@ -45,7 +45,7 @@ function highlight()
 				{}
 			);
 
-			chrome.storage.sync.set(update);
+			chrome.storage.local.set(update);
 		}
 	);
 
