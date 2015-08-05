@@ -22,8 +22,14 @@ function highlight()
 			// If this is the first visit to the thread, don't mark everything.
 			if (Object.keys(old_posts).length > 0)
 			{
-				var new_posts = posts.filter(function(post) { return !(post.id in old_posts); });
-				new_posts.forEach(function(post) { post.element.style.background = "blue"; });
+				posts.forEach
+				(
+					function(post)
+					{
+						var element_class = (post.id in old_posts) ? "hn-old-post" : "hn-new-post";
+						post.element.className += " " + element_class;
+					}
+				);
 			}
 
 			// The data stored in chrome.storage.sync is a hash of the post IDs seen
