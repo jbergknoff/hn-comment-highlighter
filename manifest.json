@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
-	"name": "Hacker News comment highlighter",
-	"description": "Highlights comments on Hacker News threads that are new since your last visit",
+	"name": "Hacker News Comment Highlighter",
+	"description": "Highlights unread comments in Hacker News threads",
 	"version": "1.0",
 	"content_scripts":
 	[
