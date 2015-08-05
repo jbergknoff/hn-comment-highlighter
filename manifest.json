@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "test name",
+	"description": "test description",
+	"version": "1.0",
+	"content_scripts":
+	[
+		{
+			"matches": [ "https://news.ycombinator.com/item?*" ],
+			"js": [ "thing.js" ]
+		}
+	],
+	"permissions": [ "storage" ]
+}
