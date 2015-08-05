@@ -1,13 +1,13 @@
 {
 	"manifest_version": 2,
-	"name": "test name",
-	"description": "test description",
+	"name": "Hacker News comment highlighter",
+	"description": "Highlights comments on Hacker News threads that are new since your last visit",
 	"version": "1.0",
 	"content_scripts":
 	[
 		{
 			"matches": [ "https://news.ycombinator.com/item?*" ],
-			"js": [ "thing.js" ]
+			"js": [ "highlighter.js" ]
 		}
 	],
 	"permissions": [ "storage" ]
