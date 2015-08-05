@@ -38,7 +38,7 @@ function highlight()
 			(
 				function(accumulator, post)
 				{
-					accumulator[post.id] = true;
+					accumulator[post.id] = 1;
 					return accumulator;
 				},
 				{}
