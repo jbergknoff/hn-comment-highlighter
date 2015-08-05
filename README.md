@@ -4,6 +4,8 @@ This Chrome extension keeps track of which comments you've seen in a given Hacke
 
 ![Screenshot](http://i.imgur.com/BCfhqj7.png)
 
+[Icon source](http://findicons.com/icon/24925/highlighter_green_01?id=25098)
+
 ## License
 
 [MIT](LICENSE)
